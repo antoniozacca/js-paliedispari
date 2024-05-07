@@ -3,6 +3,7 @@
 let numeroUtente = document.getElementById("numero-utente");
 let sceltaUtente = document.getElementById("scelta-utente"); 
 const btnGenerate = document.getElementById("btn");
+const vincitore = document.getElementById("vincitore");
 btnGenerate.addEventListener('click', function(e) {
     e.preventDefault();
 
@@ -21,19 +22,15 @@ btnGenerate.addEventListener('click', function(e) {
     function pariEdispari() {
         if (somma % 2 === 0) {
             if (sceltaUtente === "pari") {
-                const vincitore = document.getElementById("vincitore");
-                vincitore.innerHTML = "utente";
+                vincitore.innerText = "vince l'utente"
             } else if (sceltaUtente === "dispari"){
-                const vincitore = document.getElementById("vincitore");
-                vincitore.innerHTML = "computer";
+                vincitore.innerText = "vince il computer"
             }
         } else {
             if (sceltaUtente === "pari") {
-                const vincitore = document.getElementById("vincitore");
-                vincitore.innerHTML = "computer";
+                vincitore.innerText = "vince il computer"
             } else if (sceltaUtente === "dispari"){
-                const vincitore = document.getElementById("vincitore");
-                vincitore.innerHTML = "utente";
+                vincitore.innerText = "vince l'utente"
             }
         }
         return pariEdispari;
